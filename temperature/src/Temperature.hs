@@ -4,11 +4,10 @@ module Temperature (tempToC, tempToF) where
 `  Fahrenheit to Celsius                    -}
 
 tempToC :: Integer -> Float
-tempToC temp = error "Implement this function."
-
+tempToC temp = fromIntegral (temp - 32) / 1.8
 
 {- Implement the function `tempToF` to convert
 `  Celsius to Fahrenheit                    -}
 
 tempToF :: Float -> Integer
-tempToF temp = error "Implement this function."
+tempToF temp = ceiling ((temp * 1.8) + 32)
